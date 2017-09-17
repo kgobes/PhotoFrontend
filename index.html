@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="config.js"></script>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <title>My 331 Photos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <link rel="stylesheet" href="/Styles/styles.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <nav>
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo center">Photo Sharing App</a>
+
+            </div>
+        </nav>
+        <div class="row valign-wrapper">
+            <h1 class="col s8">All Photos</h1>
+            <div class="col s4 right-align">
+                <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>
+            </div>
+        </div>
+
+        <div id="thumbs" class="row"></div>
+
+        <h1>Upload a Photo</h1>
+
+        <form name="uploader" enctype="multipart/form-data">
+            <input name="fupload" type="file" />
+            <p><label for="description">Enter a Description: </label>
+                <textarea rows="6" cols="50" id="description" name="description"></textarea></p>
+            <input type="button" value="Upload Photo">
+        </form>
+        <progress value="" max=""></progress>
+    </div>
+
+    <script type="text/javascript" src="index.js">
+
+    </script>
+
+</body>
+
+</html>
