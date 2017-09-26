@@ -1,5 +1,30 @@
-function fetchPhotos()
-{
+src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"
+
+$('.grid').isotope({
+  itemSelector: '.grid-item',
+  masonry: {
+    columnWidth: 200
+  }
+});
+
+function showPopup() {
+    var popup = document.getElementById("uploadButton");
+    //popup.classList.toggle("show");
+   // popup.style.visibility = "visible";
+    popup.style.opacity = 1;
+    //popup.style.display = "block";
+}
+//NOT WORKING !! 
+function hidePopup() {
+    var popup = document.getElementById("uploadButton");
+    //popup.style.visibility = "hidden";
+    popup.style.opacity = 0;
+   // popup.classList.toggle("show");
+
+    //alert("close the box PLz");
+}
+
+function fetchPhotos() {
     // get the dive where the images should go
     var $tn_div = $("#thumbs");
     // just in case there's anything still in the thumbnails div, clear it out
@@ -12,13 +37,25 @@ function fetchPhotos()
         jQuery.each(data, function(key, val)
         {
             // append the images to the div, and make them clickable for details
+            
+      //ATTEMPT to adjust based on height or width, might come back to later
+            /*if($('<img />').height<200){
+               $('<img />').wrap("<div class = 'grid-item'></div>")
+            }
+            else{
+             //   alert("test big image");
+               $('<img />').wrap("<div class = 'grid-item--height2'></div>")
+            }*/
             $('<img />')
+                .wrap("<div class = 'grid-item'></div>")//class added for isotope grid
                 .attr("src", $path_to_backend + val.tn_src)
                 .attr("id", val.id).appendTo($tn_div)
-                .attr("class", "tn")
-                .wrap('<a class="col l2 s3 card-panel" href="viewPhoto.html?id=' + val.id + '"></a>')
-                .wrap('<div class="card-image center-align"></div>');
-                
+                //.attr("class", "tn")
+            .wrap('<a href="viewPhoto.html?id=' + val.id + '"></a>')
+       
+              
+            // .wrap('<a class="col l2 s3 card-panel" href="viewPhoto.html?id=' + val.id + '"></a>')
+               // .wrap('<div class="card-image center-align"></div>');
             });
     });
 };

@@ -5,12 +5,18 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="config.js"></script>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-    <title>My 331 Photos</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <title>Photo Share</title>
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">-->
+  <!--  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Quicksand" rel="stylesheet">
     
-    <link rel="stylesheet" href="/Styles/styles.css">
+    <link rel="stylesheet" href="styles.css">
+    
+    
+    <!--Istope-->
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+
 </head>
 
 <body>
@@ -18,34 +24,62 @@
     <div class="container">
         <nav>
             <div class="nav-wrapper">
-                <a href="#" class="brand-logo center">Photo Sharing App</a>
+                <a href="#" class="brand-logo center">Photo Share</a>
 
             </div>
         </nav>
-        <div class="row valign-wrapper">
-            <h1 class="col s8">All Photos</h1>
-            <div class="col s4 right-align">
-                <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>
-            </div>
-        </div>
-
-        <div id="thumbs" class="row"></div>
-
-        <h1>Upload a Photo</h1>
-
-        <form name="uploader" enctype="multipart/form-data">
-            <input name="fupload" type="file" />
-            <p><label for="description">Enter a Description: </label>
-                <textarea rows="6" cols="50" id="description" name="description"></textarea></p>
+     
+        <!-- Popup box for uploading a photo-->
+<div class = "popup" onclick="showPopup()">Upload Photos 
+<div class="popuptext" id="uploadButton"> 
+    Select Photos to Upload:
+    <div id = "closeBox" onclick="hidePopup()">X</div>
+    <form name="uploader" enctype="multipart/form-data">
+            <input name="fupload" id = "fupload2" type="file" /><br>
+            <p><label id = "desc" for="description">Photo Description:<br><br> </label>
+                <textarea rows="4" cols="25" id="description" name="description"></textarea></p>
             <input type="button" value="Upload Photo">
         </form>
         <progress value="" max=""></progress>
+    </div></div>
+        
+    <!--<div class="row valign-wrapper">
+            <h1 class="col s8">All Photos</h1>
+            <div class="col s4 right-align">
+                <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons"></i></a>
+            </div>
     </div>
+-->
+        <div id = "photoWrapper">
 
-    <script type="text/javascript" src="index.js">
+        <div id="thumbs" class="grid"> 
+        <div class="gutter-sizer"></div>
+        <div class="grid-sizer"></div>
+        </div>
+        </div>
+        <!--UPLOAD -->
 
-    </script>
+      
+     
+    </div>
+    </body>
 
-</body>
+<script>
+    $('.grid').isotope({
+  layoutMode: 'fitRows',
+  itemSelector: '.grid-item',
+  percentPosition: true,
+    masonry: {
+    columnWidth: '.grid-sizer'
+  },
+    fitRows: {
+    gutter: '.gutter-sizer'
+  }
+     });
+    
+</script>
+
+<script type="text/javascript" src="index.js"></script>
+
 
 </html>
