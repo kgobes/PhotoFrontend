@@ -7,11 +7,11 @@
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
     <title>My 331 Photos</title>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css"> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script> -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     
-    <link rel="stylesheet" href="/Styles/styles.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
@@ -22,9 +22,19 @@
             </div>
         </nav>
         <h1>View Photo</h1>
-        <button id="deleteButton">Delete</button>
+
         <p id="description"></p>
         <img id="image"></img>
+        <button id="deleteButton">Delete</button>
+        <button id="editButton">Edit</button>
+        <div id="editDescriptionForm">
+            <textarea id="descriptionArea">
+
+            </textarea>
+            <button id="submitDescriptionChangeButton">
+                OK
+            </button>
+        </div>
     </div>
     <script type="text/javascript" src="viewPhoto.js">
 

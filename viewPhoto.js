@@ -4,6 +4,10 @@ var description;
 function readyPage(){
     loadPhoto();
     $("#deleteButton").click(deletePhoto);
+    $("#editButton").click(editDescription);
+    $("#submitDescriptionChangeButton").click(updatePhoto);
+    $("#editDescriptionForm").hide();
+    
 }
 
 function loadPhoto(){
@@ -29,8 +33,21 @@ function deletePhoto(){
     });
 }
 
+function editDescription(){
+    $("#descriptionArea").val(description);
+    $("#editDescriptionForm").show();
+    //alert(description);    
+    $("#editButton").hide();
+}
+
 function updatePhoto(){
-    
+    let $endpoint = $path_to_backend + 'updatePhoto.php';
+    let newDescription = $("#descriptionArea").val();
+
+    $.post($endpoint, {id: id, description: newDescription}, function(data){
+        //alert(data);
+        location.reload();
+    });
 }
 
 $(document).ready(readyPage);
