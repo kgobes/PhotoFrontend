@@ -95,8 +95,6 @@ nav{
 }
 
 
-
-
 /*Upload pop up*/
 .popup { /*The text that you click to upload*/
     position: relative;
@@ -107,7 +105,6 @@ nav{
     border-style: solid;
     border: 1px;
     font-weight: bolder;
-
 }
 #id{
     font-size: 5px;
@@ -116,9 +113,9 @@ nav{
 /* The actual popup */
 .popup .popuptext {
     margin-left: 25%;
-   /* display: none;*/
+   /* display: none;
     opacity: 0;
-    /*visibility: hidden;*/
+    visibility: hidden;*/
     width: 50%;
     background-color: #555;
     color: black;

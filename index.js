@@ -7,19 +7,28 @@ $('.grid').isotope({
   }
 });
 
+function pageLoad(){
+    fetchPhotos(); 
+    hidePopup();
+}
+
 function showPopup() {
-    var popup = document.getElementById("uploadButton");
+    var popup = $("#uploadButton");
     //popup.classList.toggle("show");
    // popup.style.visibility = "visible";
-    popup.style.opacity = 1;
+    //popup.style.opacity = 1;
     //popup.style.display = "block";
+    popup.show();
 }
+
 //NOT WORKING !! 
 function hidePopup() {
-    var popup = document.getElementById("uploadButton");
+    var popup = $("#uploadButton");
+    popup.hide();
+    //alert('close');
     //popup.style.visibility = "hidden";
-    popup.style.opacity = 0;
-   // popup.classList.toggle("show");
+    //popup.style.opacity = 0;
+    // popup.classList.toggle("show");
 
     //alert("close the box PLz");
 }
@@ -51,7 +60,8 @@ function fetchPhotos() {
                 .attr("src", $path_to_backend + val.tn_src)
                 .attr("id", val.id).appendTo($tn_div)
                 //.attr("class", "tn")
-            .wrap('<a href="viewPhoto.html?id=' + val.id + '"></a>')
+            .wrap('<a href="viewPhoto.html?id=' + val.id + '"></a>');
+            hidePopup();
        
               
             // .wrap('<a class="col l2 s3 card-panel" href="viewPhoto.html?id=' + val.id + '"></a>')
@@ -60,7 +70,7 @@ function fetchPhotos() {
     });
 };
 
-$(document).ready(fetchPhotos());
+$(document).ready(pageLoad());
 
 // verification for the file
 $(':file').on('change', function() 
@@ -101,6 +111,12 @@ $(':button').on('click', function()
                         });
                     }
                 } , false);
+            }
+
+            myXhr.onreadystatechange = function() {
+                if(myXhr.readyState == 4 && myXhr.status == 200){
+                    fetchPhotos();
+                }
             }
             return myXhr;
         }
