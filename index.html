@@ -2,16 +2,22 @@
 <html>
 
 <head>
+
+   
+    <!-- Magnific Popup core CSS file -->
+<link rel="stylesheet" href="magnific-popup.css">
+    <!-- Magnific Popup core JS file -->
+<script src="magnific-popup.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="config.js"></script>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
     <title>Photo Share</title>
-    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">-->
-  <!--  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>-->
+    
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Quicksand" rel="stylesheet">
     
     <link rel="stylesheet" href="styles.css">
+    
     
     
     <!--Istope-->
@@ -30,28 +36,22 @@
         </nav>
      
         <!-- Popup box for uploading a photo-->
-<div class = "popup" ><span id="openPopup" onclick="showPopup()">Upload Photos</span> 
+        <div class = "popup" ><span id="openPopup" onclick="showPopup()"><div id = "outlinepopup">Upload Photos</div></span> 
 <div class="popuptext" id="uploadButton"> 
-    Select Photos to Upload:
-    <div id = "closeBox" onclick="hidePopup()">X</div>
+    <div id = "titletext"><div id = "selecttext">Select Photos to Upload:</div><br>
+        </div>
     <form name="uploader" enctype="multipart/form-data">
             <input name="fupload" id = "fupload2" type="file" /><br>
             <p><label id = "desc" for="description">Photo Description:<br><br> </label>
                 <textarea rows="4" cols="25" id="description" name="description"></textarea></p>
             <input type="button" value="Upload Photo">
         </form>
-        <progress value="" max=""></progress>
+        <progress value="" max=""></progress><div id = "closeBox" onclick="hidePopup()">Cancel</div>
     </div></div>
         
-    <!--<div class="row valign-wrapper">
-            <h1 class="col s8">All Photos</h1>
-            <div class="col s4 right-align">
-                <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons"></i></a>
-            </div>
-    </div>
--->
-        <div id = "photoWrapper">
 
+        
+        <div id = "photoWrapper">
         <div id="thumbs" class="grid"> 
         <div class="gutter-sizer"></div>
         <div class="grid-sizer"></div>

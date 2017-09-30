@@ -63,11 +63,16 @@ a{
     color: black;
 }
 nav{
-    width: 100%;
-    font-size: 20px;
+    width: 20%;
     text-align: center;
+    font-size: 25px;
+    text-align: center;
+    margin: auto;
     margin-top: 2%;
     margin-bottom: 2%;
+    font-weight: bolder;
+  
+
 }
 
 .grid{
@@ -84,77 +89,131 @@ nav{
     margin: auto;
     padding-bottom: 5px;
     padding-top: 5px;
-    align-content: center;
-
+    align-content: center; 
+}
+.grow{
+    transition: all .2s ease-in-out;
+}
+#photoWrapper a:hover{
+  
+    transform: scale(1.3);
+    content: "hey what up";
     
+}
+.photoHover:after{
+
 }
 
 .gutter-sizer { width: 10%; }
+#backbutton{
+    width: 10%;
+    margin: auto;
+    margin-bottom: 3%;
+    outline: black solid thin;
+    text-align: center;
+    
+}
+#backbutton:hover{
+    background-color: lightcyan;
+}
 .grid-sizer {
   width: 30%;
-}
-
-
-/*Upload pop up*/
-.popup { /*The text that you click to upload*/
-    position: relative;
-    display: inline-block;
-    cursor: pointer;
-    text-align: center;
-    width: 100%;
-    border-style: solid;
-    border: 1px;
-    font-weight: bolder;
 }
 #id{
     font-size: 5px;
 }
 
-/* The actual popup */
-.popup .popuptext {
+#outlinepopup:hover{
+    background-color: lightcyan;
+}
+/*Upload pop up*/
+.popup { /*The text that you click to upload*/
+    position: relative;
+    cursor: pointer;
+    text-align: center;
+
     margin-left: 25%;
-   /* display: none;
-    opacity: 0;
-    visibility: hidden;*/
-    width: 50%;
-    background-color: #555;
+    font-weight: bolder;
+
+    width: 100%;
+    margin: auto;
+    margin-bottom: 3%;
+
+}
+#outlinepopup{
+    width:10%;
+    padding: 2px;
+    margin: auto;
+        outline: black solid thin;
+}
+/* The actual popup */
+.popuptext {
+    margin-top: 2%;
+    margin-left: 25%;
+    margin-right: 10%;
+    padding: 50px;
+    width: 40%;
+    background-color: lightcyan;
     color: black;
     text-align: center;
     border-radius: 6px;
-    padding: 8px 0;
     position: absolute;
     z-index: 1;
     align-content: center;
-   /* bottom: 125%;*/
-   /* left: 50%;*/
-    /*margin-left: -80px;*/
+    border: solid black thin;
+
 }
 
 /* Popup arrow */
 .popup .popuptext::after {
     content: "";
     position: absolute;
-/*    top: 100%;*/
-/*    left: 50%;*/
-/*    margin-left: -5px;*/
     border-width: 5px;
     border-style: solid;
     border-color: #555 transparent transparent transparent;
 }
-#closeBox{
+#titletext{
+    text-align: center;
+    width: 100%;
+    margin-top: 2%;
+    float: left;
+    margin-bottom: 2%;
+
+
+}
+#selecttext{
+        float: left;
     margin-left: 35%;
+
+}
+#closeBox{
+   
+    width: 20%;
+    margin: auto;
+     margin-top: 2%;
+    font-weight: normal;
+    padding: 1px;
+    border: black solid thin;
+}
+#closeBox:hover{
+    background-color: white;
 }
 #fupload2{
+    clear: both;
     height: 30px;
     padding: 5px;
 }
 input[type=button]{
     height: 40px;
     width: 30%;
-    padding: 12px 20px;
-    margin: 8px 0;
+    padding: 2px;
+    font-size: 15px;
+    background-color: lightcyan;
+    border: black solid thin;
+    margin-bottom: 2%;
+}
+input[type=button]:hover{
     background-color: white;
-    border: none;
 }
 input[type=file]{
     height: 40px;
@@ -181,4 +240,54 @@ input[type=file]{
 @keyframes fadeIn {
     from {opacity: 0;}
     to {opacity:1 ;}
+}
+
+
+/*VIEW PHOTO*/
+.resize{
+    margin-left: 30%;
+    height: 400px;
+    width: auto;
+}
+#description{
+    text-align: center;
+    margin-bottom: 2%;
+}
+#descText{
+    margin-top: 2%;
+    width: 100%;
+    text-align: center;
+    margin: auto;
+    font-weight: bold;
+}
+#viewbuttons{
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+
+}
+#deleteButton{
+    border: none;
+        padding: 10px 32px;
+    text-decoration: none;
+    font-size: 15px;
+    margin: auto;
+    margin-bottom: 5%;
+    outline: black solid thin;
+    background-color: white;
+    
+}
+#editButton{
+    border: none;
+    padding: 10px 32px;
+    text-decoration: none;
+    font-size: 15px;
+    background-color: white;
+    margin: auto;
+    margin-bottom: 5%;
+    outline: black solid thin;
+}
+#editButton:hover, #deleteButton:hover{
+    background-color: lightcyan;
 }

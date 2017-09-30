@@ -14,10 +14,6 @@ function pageLoad(){
 
 function showPopup() {
     var popup = $("#uploadButton");
-    //popup.classList.toggle("show");
-   // popup.style.visibility = "visible";
-    //popup.style.opacity = 1;
-    //popup.style.display = "block";
     popup.show();
 }
 
@@ -52,20 +48,19 @@ function fetchPhotos() {
                $('<img />').wrap("<div class = 'grid-item'></div>")
             }
             else{
-             //   alert("test big image");
-               $('<img />').wrap("<div class = 'grid-item--height2'></div>")
+            <div class = 'grid-item--height2'></div>")
             }*/
             $('<img />')
-                .wrap("<div class = 'grid-item'></div>")//class added for isotope grid
+                .wrap("<div class = 'popup' onclick='showPopup()'</div>")
+                .wrap("<div class = 'grid-item'></div>")
+                .wrap("<div class = 'grow'></div>")//class added for isotope grid
                 .attr("src", $path_to_backend + val.tn_src)
                 .attr("id", val.id).appendTo($tn_div)
-                //.attr("class", "tn")
-            .wrap('<a href="viewPhoto.html?id=' + val.id + '"></a>');
+
+                .wrap('<a href="viewPhoto.html?id=' + val.id + '"></a>');
+            // .wrap('<a href=""></a>');
             hidePopup();
        
-              
-            // .wrap('<a class="col l2 s3 card-panel" href="viewPhoto.html?id=' + val.id + '"></a>')
-               // .wrap('<div class="card-image center-align"></div>');
             });
     });
 };

@@ -5,7 +5,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="config.js"></script>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-    <title>My 331 Photos</title>
+    <title>View Photo</title>
 
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css"> -->
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script> -->
@@ -18,15 +18,19 @@
     <div class="container">
         <nav>
             <div class="nav-wrapper">
-                <a href="/" class="brand-logo center">Photo Sharing App</a>
+                <a href="/" class="brand-logo center">Photo Share</a>
             </div>
         </nav>
-        <h1>View Photo</h1>
 
-        <p id="description"></p>
-        <img id="image"></img>
+       <div id = "backbutton"><a href = "index.html">Back</a>
+
+        </div>
+        <img id="image" class = "resize"><br>
+        <div id = "descText">Description:</div><br>
+       <p id="description"></p>
+        <div id = "viewbuttons">
         <button id="deleteButton">Delete</button>
-        <button id="editButton">Edit</button>
+            <button id="editButton">Edit</button></div>
         <div id="editDescriptionForm">
             <textarea id="descriptionArea">
 
