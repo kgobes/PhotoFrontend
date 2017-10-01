@@ -3,23 +3,23 @@
 
 <head>
 
-   
+
     <!-- Magnific Popup core CSS file -->
-<link rel="stylesheet" href="magnific-popup.css">
+    <link rel="stylesheet" href="magnific-popup.css">
     <!-- Magnific Popup core JS file -->
-<script src="magnific-popup.js"></script>
+    <script src="magnific-popup.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="config.js"></script>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
     <title>Photo Share</title>
-    
+
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Quicksand" rel="stylesheet">
-    
+
     <link rel="stylesheet" href="styles.css">
-    
-    
-    
+
+
+
     <!--Istope-->
     <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
 
@@ -34,49 +34,52 @@
 
             </div>
         </nav>
-     
-        <!-- Popup box for uploading a photo-->
-        <div class = "popup" ><span id="openPopup" onclick="showPopup()"><div id = "outlinepopup">Upload Photos</div></span> 
-<div class="popuptext" id="uploadButton"> 
-    <div id = "titletext"><div id = "selecttext">Select Photos to Upload:</div><br>
-        </div>
-    <form name="uploader" enctype="multipart/form-data">
-            <input name="fupload" id = "fupload2" type="file" /><br>
-            <p><label id = "desc" for="description">Photo Description:<br><br> </label>
-                <textarea rows="4" cols="25" id="description" name="description"></textarea></p>
-            <input type="button" value="Upload Photo">
-        </form>
-        <progress value="" max=""></progress><div id = "closeBox" onclick="hidePopup()">Cancel</div>
-    </div></div>
-        
 
-        
-        <div id = "photoWrapper">
-        <div id="thumbs" class="grid"> 
-        <div class="gutter-sizer"></div>
-        <div class="grid-sizer"></div>
+        <!-- Popup box for uploading a photo-->
+        <div class="popup"><span id="openPopup" onclick="showPopup()"><div id = "outlinepopup">Upload Photos</div></span>
+            <div class="popuptext" id="uploadButton">
+                <div id="titletext">
+                    <div id="selecttext">Select Photos to Upload:</div><br>
+                </div>
+                <form name="uploader" id="uploadForm" enctype="multipart/form-data">
+                    <input name="fupload" id="fupload2" type="file" /><br>
+                    <p><label id="desc" for="description">Photo Description:<br><br> </label>
+                        <textarea rows="4" cols="25" id="description" name="description"></textarea></p>
+                    <input type="button" value="Upload Photo">
+                </form>
+                <progress value="" max=""></progress>
+                <div id="closeBox" onclick="hidePopup()">Cancel</div>
+            </div>
         </div>
+
+
+
+        <div id="photoWrapper">
+            <div id="thumbs" class="grid">
+                <div class="gutter-sizer"></div>
+                <div class="grid-sizer"></div>
+            </div>
         </div>
         <!--UPLOAD -->
 
-      
-     
+
+
     </div>
-    </body>
+</body>
 
 <script>
     $('.grid').isotope({
-  layoutMode: 'fitRows',
-  itemSelector: '.grid-item',
-  percentPosition: true,
-    masonry: {
-    columnWidth: '.grid-sizer'
-  },
-    fitRows: {
-    gutter: '.gutter-sizer'
-  }
-     });
-    
+        layoutMode: 'fitRows',
+        itemSelector: '.grid-item',
+        percentPosition: true,
+        masonry: {
+            columnWidth: '.grid-sizer'
+        },
+        fitRows: {
+            gutter: '.gutter-sizer'
+        }
+    });
+
 </script>
 
 <script type="text/javascript" src="index.js"></script>

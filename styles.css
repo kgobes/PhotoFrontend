@@ -100,8 +100,13 @@ nav{
     content: "hey what up";
     
 }
-.photoHover:after{
 
+.photoClickArea {
+    text-align: center;
+}
+
+.hoverButtons {
+    color: darkgrey;    
 }
 
 .gutter-sizer { width: 10%; }
@@ -214,6 +219,7 @@ input[type=button]{
 }
 input[type=button]:hover{
     background-color: white;
+    cursor: pointer;
 }
 input[type=file]{
     height: 40px;
