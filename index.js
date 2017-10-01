@@ -12,13 +12,17 @@ function pageLoad() {
     hidePopup();
 
     //try to handle close on outside click
-    $('body').click(
+    $('html').click(
         function () {
-            //alert('hi');
-            //isPopupOpen ? hidePopup() : null;
+            //isPopupOpen ?  alert(isPopupOpen) : null;
+            isPopupOpen ? hidePopup() : null;
         }
     );
     $('#uploadButton').click(function () {
+        event.stopPropagation();
+    });
+    
+    $('#outlinepopup').click(function () {
         event.stopPropagation();
     });
 

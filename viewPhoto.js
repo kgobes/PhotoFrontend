@@ -39,6 +39,7 @@ function editDescription(){
     $("#editDescriptionForm").show();
     //alert(description);    
     $("#editButton").hide();
+    $('#description').hide();
 }
 
 function updatePhoto(){

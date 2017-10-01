@@ -132,9 +132,12 @@ nav{
     background-color: lightcyan;
 }
 /*Upload pop up*/
+#outlinepopup, #closeBox {
+    cursor: pointer;
+}
+
 .popup { /*The text that you click to upload*/
     position: relative;
-    cursor: pointer;
     text-align: center;
 
     margin-left: 25%;
@@ -255,7 +258,7 @@ input[type=file]{
     height: 400px;
     width: auto;
 }
-#description{
+#description {
     text-align: center;
     margin-bottom: 2%;
 }
@@ -294,6 +297,26 @@ input[type=file]{
     margin-bottom: 5%;
     outline: black solid thin;
 }
-#editButton:hover, #deleteButton:hover{
+
+#descriptionArea {
+    font-size: 16px;
+    text-align: center;
+}
+
+#submitDescriptionChangeButton{
+    border: none;
+    padding: 10px 32px;
+    text-decoration: none;
+    font-size: 15px;
+    background-color: white;
+    margin: auto;
+    outline: black solid thin;
+}
+#editButton:hover, #deleteButton:hover, #submitDescriptionChangeButton:hover {
     background-color: lightcyan;
+}
+#editDescriptionForm {
+    margin-bottom: 1%;
+    text-align: center;
+    justify-content: center;
 }
