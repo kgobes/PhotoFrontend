@@ -30,7 +30,7 @@ function deletePhoto(){
     //Well this doesn't seem like it's working
     $.post($endpoint, {id: id},function(data){
         //alert(data);
-        location.href = "./";
+        location.href = "index.html";
     });
 }
 
